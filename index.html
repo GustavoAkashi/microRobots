@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MicroRobots</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="barraLateral">
+        <div>           
+            <img id="pino" src="assets/pinoprincipal.png", width="100px", height="100px", left="30px"/>
+            
+            <img id="dice" src="assets/numberdice/numberDice.svg" alt="Rodar Dado", width="100px", height="100px", onClick="rolldicePlayer()" onmouseover="aumenta(this)" onmouseout="diminui(this)"/>
+        
+            <img id="flag" src="assets/flag.svg", width="100px", height="100px", left="30px"/>
+        
+            <img id="objective" src="assets/numberdice/numberDice.svg" alt="Rodar Dado", width="100px", height="100px", onClick="rolldiceObjective()" onmouseover="aumenta(this)" onmouseout="diminui(this)"/>
+        
+            <input id ="restart" type="button" value="Restart" onClick="window.location.reload()"/>
+        </div>
+            
+    </div>
+    
+    <div id="barradados">
+        <img id="player.resultadoDadonumber" src="assets/resultado.png", width="100px", height="100px"/>
+        <img id="player.resultadoDadocolor" src="assets/resultado.png", width="100px", height="100px"/>
+
+        <img id="objective.resultadoDadonumber" src="assets/resultado.png", width="100px", height="100px"/>
+        <img id="objective.resultadoDadocolor" src="assets/resultado.png", width="100px", height="100px"/>
+    
+    </div>
+
+    <div id="tabuleiro">
+        <table>
+            <tdbody>
+                <tr>
+                    <th class="blue" id = "2x1">
+                        <span id="2x1">2</span>
+                    </th>
+                    <th class="grey" id = "3x2">
+                        <span id ="3x2">3</span>
+                    </th>
+                    <th class="grey" id = "5x2">
+                        <span id ="5x2">5</span>
+                    </th>
+                    <th class="red" id = "4x4">
+                        <span id ="4x4">4</span>
+                    </th>
+                    <th class="pink" id = "5x6">
+                        <span id ="5x6">5</span>
+                    </th>
+                    <th class="blue" id = "4x1">
+                        <span id ="4x1">4</span>
+                    </th>
+                </tr>
+                <tr>
+                    <th class="blue" id = "6x1">
+                        <span id ="6x1">6</span>
+                    </th>
+                    <th class="yellow" id = "4x3">
+                        <span id ="4x3">4</span>
+                    </th>
+                    <th class="pink" id = "4x6">
+                        <span id ="4x6">4</span>
+                    </th>
+                    <th class="yellow" id = "3x3">
+                        <span id ="3x3" >3</span>
+                    </th>
+                    <th class="green" id = "4x5">
+                        <span id ="4x5">4</span>
+                    </th>
+                    <th class="green" id="6x5">
+                        <span id="6x5">6</span>
+                    </th>
+                </tr>
+                <tr>
+                    <th class="grey" id="6x2">
+                        <span id="6x2">6</span>
+                    </th>
+                    <th class="pink" id="3x6">
+                        <span id="3x6">3</span>
+                    </th>
+                    <th class="blue" id="3x1">
+                        <span id="3x1">3</span>
+                    </th>
+                    <th class="red" id="3x4">
+                        <span id="3x4">3</span>
+                    </th>
+                    <th class="red" id="2x4">
+                        <span id="2x4">2</span>
+                    </th>
+                    <th class="green" id="3x5">
+                        <span id="3x5">3</span>
+                    </th>
+                </tr>
+            </tdbody>
+        </table>
+        <table>
+            <tbody>
+                <tr>
+                    <th class="red" id ="6x4">
+                        <span id ="6x4">6</span>
+                    </th>
+                    <th class="yellow" id ="5x3">
+                        <span id ="5x3">5</span>
+                    </th>
+                    <th class="red" id ="1x4">
+                        <span id ="1x4">1</span>
+                    </th>
+                    <th class="grey" id ="4x2">
+                        <span id ="4x2">4</span>
+                    </th>
+                    <th class="pink" id ="6x6">
+                        <span id ="6x6">6</span>
+                    </th>
+                    <th class="red" id ="5x4">
+                        <span id ="5x4">5</span>
+                    </th>
+                </tr>
+                <tr>
+                    <th class="green" id ="1x5">
+                        <span id ="1x5">1</span>
+                    </th>
+                    <th class="blue" id ="5x1">
+                        <span id ="5x1">5</span>
+                    </th>
+                    <th class="yellow" id ="6x3">
+                        <span id ="6x3">6</span>
+                    </th>
+                    <th class="green" id ="2x5">
+                        <span id ="2x5">2</span>
+                    </th>
+                    <th class="pink" id ="2x6">
+                        <span id ="2x6">2</span>
+                    </th>
+                    <th class="grey" id ="2x2">
+                        <span id ="2x2">2</span>
+                    </th>
+                </tr>
+                <tr>
+                    <th class="pink" id ="1x6">
+                        <span id ="1x6">1</span>
+                    </th>
+                    <th class="green" id ="5x5">
+                        <span id ="5x5">5</span>
+                    </th>
+                    <th class="yellow" id ="1x3">
+                        <span id ="1x3">1</span>
+                    </th>
+                    <th class="blue" id ="1x1">
+                        <span id ="1x1">1</span>
+                    </th>
+                    <th class="grey" id ="1x2">
+                        <span id ="1x2">1</span>
+                    </th>
+                    <th class="yellow" id ="2x3">
+                        <span id ="2x3">2</span>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
